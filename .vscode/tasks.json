@@ -1,0 +1,25 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile and Run with I/O (Windows)",
+      "type": "shell",
+      "command": "cmd.exe",
+      "args": [
+        "/c",
+        "javac ${file} && java ${fileBasenameNoExtension} < input.txt > output.txt"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

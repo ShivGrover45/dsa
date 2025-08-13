@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class hashing {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int size;
+        size=sc.nextInt();
+        int[] a=new int[size];
+        for(int i=0;i<size;i++){
+            a[i]=sc.nextInt();
+        }
+        int[] hash=new int[1000000000];
+
+        for(int i=0;i<size;i++){
+            hash[a[i]]+=1;
+        }
+        
+        int q;
+        q=sc.nextInt();
+        while(q>=0){
+            int number;
+            number=sc.nextInt();
+            System.out.println(hash[number]);
+            q--;
+        }
+
+    }
+    
+}
